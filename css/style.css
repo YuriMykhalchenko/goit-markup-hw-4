@@ -165,9 +165,7 @@ body {
 
 .top-item {
   display: block;
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
 }
 
 .top-item+.top-item {
@@ -175,6 +173,8 @@ body {
 }
 
 .top-list-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
@@ -186,23 +186,26 @@ body {
   color: var(--accent-color);
 }
 
+.top-icons {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
 .top-icons:hover,
 .top-icons:focus {
   fill: var(--accent-color);
 }
 
-.top-icons {
-  fill: var(--text-color);
-  margin-right: 10px;
-}
+
 
 .center-hero {
-  background: rgba(47, 48, 58, 0.4);
+  background-color: rgba(47, 48, 58, 0.4);
   background-image: url("../img/Img-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
+  height: 600px;
   margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -270,17 +273,25 @@ body {
   margin-bottom: 10px;
 }
 
+.center-skills-text {
+  font-weight: 400;
+  line-height: calc(24 / 14);
+  color: var(--text-color);
+}
+
 .skills-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   border-radius: 4px;
   background-color: var(--third-color);
   margin-bottom: 30px;
+
 }
 
-.skills-icon {
-  margin: 25px 100px;
-}
+
 
 .about {
   padding-top: 0;
@@ -294,11 +305,7 @@ body {
   margin-left: 30px;
 }
 
-.center-skills-text {
-  font-weight: 400;
-  line-height: calc(24 / 14);
-  color: var(--text-color);
-}
+
 
 .center-about-title {
   font-weight: 700;
@@ -339,10 +346,9 @@ body {
 }
 
 .name {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
 }
 
 .center-workers-name {
@@ -351,7 +357,7 @@ body {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--title-color);
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -361,37 +367,36 @@ body {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--text-color);
+  margin-bottom: 16px;
 }
 
 .icons-list {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 30px;
+
 }
 
 .icons-item-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  color: var(--icons-color);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .workers-icons {
-  fill: var(--icons-color);
+  fill: currentColor;
 }
 
 .icons-item-link:hover,
 .icons-item-link:focus {
   background-color: var(--accent-color);
+  color: var(--main-color);
 }
 
-.icons-item-link:hover .workers-icons,
-.icons-item-link:focus .workers-icons {
-  fill: var(--main-color);
-}
 
 .clients-title {
   font-weight: 700;
@@ -406,14 +411,7 @@ body {
 
 }
 
-.clients-item {
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid #AFB1B8;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
+.clients-item {}
 
 .clients-item:hover,
 .clients-item:focus {
@@ -421,7 +419,15 @@ body {
 }
 
 .clients-item-link {
-  margin: 16px 32px;
+  display: flex;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  color: var(--clients-color);
+
 }
 
 .clients-item+.clients-item {
@@ -429,7 +435,7 @@ body {
 }
 
 .clients-icon {
-  fill: var(--clients-color);
+  fill: currentColor;
 }
 
 .clients-item:hover .clients-icon,
@@ -492,18 +498,19 @@ body {
 
 .ft {
   display: flex;
+  align-items: baseline;
 }
 
 .social {
   margin-left: 70px;
 }
 
-.social-title {
+.social-text {
   font-size: 14px;
   line-height: calc(16/14);
   color: #FFFFFF;
   margin-bottom: 20px;
-  margin-top: 12px;
+  text-transform: uppercase;
 }
 
 .social-list {
@@ -520,15 +527,17 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
+  color: var(--main-color);
 }
 
 .social-item-link:hover,
 .social-item-link:focus {
   background: var(--accent-color);
+
 }
 
 .social-icons {
-  fill: var(--main-color);
+  fill: currentColor;
 }
 
 .middle {
@@ -597,6 +606,15 @@ body {
   margin-bottom: 30px;
   width: 370px;
   border: 1px solid #EEEEEE;
+}
+
+.middle-choice-item:hover,
+.middle-choice-item:focus {
+  background: var(--main-color);
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .choice-title {
